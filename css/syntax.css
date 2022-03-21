@@ -1,0 +1,19 @@
+ .editor { font-family: 'Roboto Mono', monospace; font-size: 17px; outline: none; overflow-y: auto; padding-left: 48px; counter-reset: line; }
+      .editor div { display: block; position: relative; white-space: pre-wrap; }
+      .editor div::before { content: counter(line); counter-increment: line; position: absolute; right: calc(100% + 16px); opacity: 0.5; }
+      keyword {
+        color: blue;
+        font-weight: bold;
+      }
+            red {
+        color: red;
+        font-style: italic;
+      }
+            green {
+        color: #30A812;
+        font-style: italic;
+      }
+
+
+
+      

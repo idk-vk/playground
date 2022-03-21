@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Playground- Bhail Lang++</title>
+    <meta name="description" content="Toy Language with Production level capabilities."/>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" type="text/css" href="css/syntax.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+<!--Header Section-->
+<section class="bg-gradient pt-5 pb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+                <div class="heading-brand">B++</div>
+                <a href="https://npmjs.com/bhaiminus/" class="btn btn-dark" target="_blank">Install</a>
+            </div>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-8 mx-auto text-center">
+                <h1>Playground for Bhai Lang++</h1>
+                <p class="lead mb-5">Try out B++ in your browser and see how fun it is to code the way you speak.Feel free to use vanilla JS code with B++. Also just so you know, the browser implementation will be missing some features like writing/reading files or making http requests. It also won't be able to give you B++ syntax suggestions in case of errors. For those try the cli version.</p>
+                <a onclick="runcode()" class="btn btn-success svg-icon">
+                    <em class="mr-2" onclick="runcode()" data-feather="github"></em>
+                    Contribute
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-9 mx-auto">
+                <div class="code-window">
+                    <div class="dots">
+                        <div class="red"></div>
+                        <div class="orange"></div>
+                        <div class="green"></div>
+                    </div>
+                  <!--   <pre contenteditable="true" id ="_code" class="language-javascript line-numbers"><code  class="language-javascript"><div contenteditable="true">console.log('hi')
+</div>
+</code></pre> -->
+    <br>         
+
+ <div class="editor" id='_code' contenteditable="true" spellcheck="false">
+      <div>console.log('hi')</div>
+ 
+    </div>
+
+
+<br>
+
+
+
+                </div>
+
+             <br>
+                   <a onclick="runcode()" class="btn btn-light svg-icon">
+                    <em class="mr-2" onclick="runcode()" data-feather="chevron-right"></em>
+                    Run code
+                </a>
+
+                   <a onclick="code_photo()" class="btn btn-light svg-icon">
+                    <em class="mr-2" onclick="runcode()" data-feather="chevron-right"></em>
+                    Download code as Image
+                </a>
+
+
+<br>
+
+<!--  -->
+<br>
+                <div id="terminal" style="display: none;" class="term-window">
+                    <div class="dots">
+                       <!--  <div class="black"></div>
+                        <div class="black"></div>
+                        <div class="black"></div> -->
+                    </div>
+                  <!--   <pre contenteditable="true" id ="_code" class="language-javascript line-numbers"><code  class="language-javascript"><div contenteditable="true">console.log('hi')
+</div>
+</code></pre> -->
+ <div class="" id='_console' style="color: #ABB1A9;" spellcheck="false">
+
+       </div>
+
+    </div>
+
+<br>
+
+
+
+                </div>
+
+<!-- Console -->
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Features Section-->
+<section class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2 class="text-center text-md-left">Reasons Why you would Love <span class="text-success">B++</span></h2>
+                <div class="row feature-grid">
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="check-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Code like you talk. Literly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="command" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Write Production ready code.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="feather" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Light as a Feather
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="zap" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Blazing Fast
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="git-pull-request" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Use JS whenever you want
+                            </div>
+                        </div>
+                    </div><div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="droplet" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Produces Pure Node Js code
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Used By Section-->
+
+
+<!--footer-->
+<footer class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Website</a></li>
+                    <li class="list-inline-item"><a href="https://prismjs.com/extending.html">Github</a></li>
+                    <li class="list-inline-item"><a href="https://github.com/LeaVerou/prism/">NPM</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-4 mx-auto text-muted text-center small-xl">
+                &copy; 2022 B++ - All Rights Reserved
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+<script src="js/scripts.js"></script>
+<script src="js/syntax_highlighter.js"></script>
+<script src="js/interpret.js"></script>
+<script src="js/main.js"></script>
+
+
+<script type="text/javascript">
+    
+
+</script>
+
+
+
+</body>
+</html>
